@@ -12,9 +12,7 @@ Frontend: https://your-frontend-url.vercel.app
 
 Backend API: https://your-backend-url.onrender.com
 
-Swagger Docs:
-
-https://your-backend-url.onrender.com/docs
+Swagger Docs: https://your-backend-url.onrender.com/docs
 
 ---
 
@@ -192,19 +190,19 @@ docker compose up --build
 Frontend:
 
 ```bash
-http://localhost:5173
+https://civic-resolve-blush.vercel.app
 ```
 
 Backend:
 
 ```bash
-http://localhost:8000
+https://civicresolve-p5ec.onrender.com
 ```
 
 Swagger:
 
 ```bash
-http://localhost:8000/docs
+https://your-backend-url.onrender.com/docs
 ```
 
 ---
@@ -214,7 +212,7 @@ http://localhost:8000/docs
 ## 1 Clone Repository
 
 ```bash
-git clone https://github.com/your-username/CivicResolve.git
+git clone https://github.com/adya07pandey/CivicResolve
 ```
 
 ---
@@ -359,7 +357,7 @@ The project is designed with scalability and modularity in mind.
 ## Swagger UI
 
 ```bash
-http://localhost:8000/docs
+https://civicresolve-p5ec.onrender.com/docs
 ```
 
 ---
@@ -367,5 +365,5 @@ http://localhost:8000/docs
 ## ReDoc
 
 ```bash
-http://localhost:8000/redoc
+https://civicresolve-p5ec.onrender.com/redoc
 ```
