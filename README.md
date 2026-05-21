@@ -335,6 +335,7 @@ The project is designed with scalability and modularity in mind.
 - Dockerized deployment
 - Environment-based configuration
 - Easily extensible modules
+- Alembic database migrations
 
 ---
 
