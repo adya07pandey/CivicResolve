@@ -357,25 +357,25 @@ The project is designed with scalability and modularity in mind.
 
 ## Login Page
 
-![Login Page](./screenshots/LOGIN.png)
+![Login Page](./screenshots/Login Page.png)
 
 ---
 
 ## Citizen Dashboard
 
-![Citizen Dashboard](./screenshots/citizen-dashboard.png)
+![Citizen Dashboard](./screenshots/Citizen Dashboard.png)
 
 ---
 
 ## Officer Dashboard
 
-![Officer Dashboard](./screenshots/officer-dashboard.png)
+![Officer Dashboard](./screenshots/Officer Dashboard.png)
 
 ---
 
 ## Admin Dashboard
 
-![Admin Dashboard](./screenshots/admin-dashboard.png)
+![Admin Dashboard](./screenshots/Admin Dashboard.png)
 
 ---
 
