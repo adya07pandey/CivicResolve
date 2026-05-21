@@ -353,6 +353,32 @@ The project is designed with scalability and modularity in mind.
 
 ---
 
+#  Screenshots
+
+## Login Page
+
+![Login Page](./screenshots/LOGIN.png)
+
+---
+
+## Citizen Dashboard
+
+![Citizen Dashboard](./screenshots/citizen-dashboard.png)
+
+---
+
+## Officer Dashboard
+
+![Officer Dashboard](./screenshots/officer-dashboard.png)
+
+---
+
+## Admin Dashboard
+
+![Admin Dashboard](./screenshots/admin-dashboard.png)
+
+---
+
 #  API Documentation
 
 ## Swagger UI
@@ -368,3 +394,5 @@ https://civicresolve-p5ec.onrender.com/docs
 ```bash
 https://civicresolve-p5ec.onrender.com/redoc
 ```
+
+
