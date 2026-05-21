@@ -81,14 +81,28 @@ def create_officer(
             status_code=400,
             detail="Email already exists"
         )
+    department = db.query(Department).filter(
+        Department.id ==
+        officer_data.department_id
+    ).first()
 
+    if not department:
+
+        raise HTTPException(
+            status_code=404,
+            detail="Department not found"
+        )
     officer = User(
         name=officer_data.name,
+
         email=officer_data.email,
+
         password_hash=hash_password(
             officer_data.password
         ),
-        role="officer"
+
+        role="officer",
+        department_id=officer_data.department_id
     )
 
     db.add(officer)

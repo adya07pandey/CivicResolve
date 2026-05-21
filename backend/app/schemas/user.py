@@ -22,14 +22,19 @@ class UserResponse(BaseModel):
 class OfficerCreate(BaseModel):
 
     name: str
+
     email: EmailStr
+
     password: str
+
+    department_id: UUID
 
     @field_validator("name")
     @classmethod
     def validate_name(cls, value):
 
         if value.strip() == "":
+
             raise ValueError(
                 "Name cannot be empty"
             )
@@ -41,11 +46,13 @@ class OfficerCreate(BaseModel):
     def validate_password(cls, value):
 
         if value.strip() == "":
+
             raise ValueError(
                 "Password cannot be empty"
             )
 
         if len(value) < 8:
+
             raise ValueError(
                 "Password must be at least 8 characters"
             )

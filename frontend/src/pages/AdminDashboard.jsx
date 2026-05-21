@@ -10,7 +10,7 @@ function AdminDashboard() {
 
     const [departmentName, setDepartmentName] = useState("");
 
-    const [officerForm, setOfficerForm] = useState({ name: "", email: "", password: "", });
+    const [officerForm, setOfficerForm] = useState({ name: "", email: "", password: "", department_id: "",});
 
     useEffect(() => {
 
@@ -85,6 +85,7 @@ function AdminDashboard() {
                 name: "",
                 email: "",
                 password: "",
+                department_id: "",
             });
 
             fetchOfficers();
@@ -213,7 +214,36 @@ function AdminDashboard() {
                             }
                             className="dashboard-input"
                         />
+                        <select
+                            value={officerForm.department_id}
 
+                            onChange={(e) =>
+                                setOfficerForm({
+                                    ...officerForm,
+                                    department_id: e.target.value,
+                                })
+                            }
+
+                            className="dashboard-select"
+                        >
+
+                            <option value="">
+                                Select Department
+                            </option>
+
+                            {
+                                departments.map((department) => (
+
+                                    <option
+                                        key={department.id}
+                                        value={department.id}
+                                    >
+                                        {department.name}
+                                    </option>
+                                ))
+                            }
+
+                        </select>
                         <button
                             onClick={createOfficer}
                             className="admin-button"
@@ -226,87 +256,7 @@ function AdminDashboard() {
                 </div>
 
             </div>
-            {/* UNASSIGNED OFFICERS */}
 
-            <div className="card">
-
-                <h2 className="section-title">
-                    Unassigned Officers
-                </h2>
-
-                {
-                    unassignedOfficers.length === 0
-                        ? (
-                            <p className="empty-text">
-                                All officers assigned
-                            </p>
-                        )
-                        : (
-                            <div className="unassigned-list">
-
-                                {
-                                    unassignedOfficers.map(
-                                        (officer) => (
-
-                                            <div
-                                                key={officer.id}
-                                                className="unassigned-card"
-                                            >
-
-                                                <div className="unassigned-info">
-
-                                                    <h3>
-                                                        {officer.name}
-                                                    </h3>
-
-                                                    <p className="officer-email">
-                                                        {officer.email}
-                                                    </p>
-
-                                                </div>
-
-                                                <select
-                                                    defaultValue=""
-                                                    onChange={(e) =>
-                                                        assignDepartment(
-                                                            officer.id,
-                                                            e.target.value
-                                                        )
-                                                    }
-                                                    className="dashboard-select assign-select"
-                                                >
-
-                                                    <option value="">
-                                                        Assign Department
-                                                    </option>
-
-                                                    {
-                                                        departments.map(
-                                                            (department) => (
-
-                                                                <option
-                                                                    key={department.id}
-                                                                    value={department.id}
-                                                                >
-                                                                    {department.name}
-                                                                </option>
-                                                            )
-                                                        )
-                                                    }
-
-                                                </select>
-
-                                            </div>
-                                        )
-                                    )
-                                }
-
-                            </div>
-                        )
-                }
-
-            </div>
-            
             {/* DEPARTMENTS */}
 
             <div className="card" style={{ marginBottom: "30px" }}>
@@ -383,7 +333,7 @@ function AdminDashboard() {
 
             </div>
 
-            
+
 
         </div>
     );
