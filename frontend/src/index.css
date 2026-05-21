@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+
+  /* PRIMARY COLORS */
+
+  --primary: #4F5743;
+  --primary-hover: #687460;
+
+  /* BACKGROUNDS */
+
+  --bg: #F8F5F1;
+  --card-bg: #FFFFFF;
+
+  /* TEXT */
+
+  --text-primary: #4F5743;
+  --text-secondary: #687460;
+
+  /* BORDERS */
+
+  --border: #D6C8BB;
+
+  /* ACCENT COLORS */
+
+  --accent-light: #EFE7DE;
+  --accent-medium: #DCC8B7;
+
+  /* STATUS COLORS */
+
+  --success: #4F7A58;
+  --warning: #B9854B;
+  --danger: #A14B4B;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  background:
+    linear-gradient(
+      to bottom right,
+      #F8F5F1,
+      #EFE7DE
+    );
+
+  font-family: 'Inter', sans-serif;
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+}
