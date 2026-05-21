@@ -31,6 +31,11 @@ class RegisterSchema(BaseModel):
             raise ValueError(
                 "Password must be at least 8 characters"
             )
+        
+        if len(value) > 72:
+            raise ValueError(
+                "Password cannot exceed 72 characters"
+            )
 
         return value
 

@@ -67,15 +67,19 @@ def login(
             detail="Invalid credentials"
         )
 
-    valid_password = verify_password(
-        login_data.password,
-        user.password_hash
-    )
+   
+    try:
 
-    if not valid_password:
+        valid_password = verify_password(
+            login_data.password,
+            user.password_hash
+        )
+
+    except Exception:
+
         raise HTTPException(
-            status_code=401,
-            detail="Invalid credentials"
+            status_code=400,
+            detail="Invalid password format"
         )
 
     token = create_access_token(
